@@ -8,6 +8,9 @@
     font-family: 'Open Sans', sans-serif;
     position: relative;
 }
+.card.freezed {
+    opacity: 40%;
+}
 
 .card-header,.card-footer {
     display: flex;

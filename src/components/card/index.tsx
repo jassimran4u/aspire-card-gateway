@@ -8,9 +8,10 @@ interface CardProps {
     validity: string;
     cvv: string;
     cardScheme: string;
+    isFreezed: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ name, cardNumber, validity, cvv, cardScheme }) => {
+const Card: React.FC<CardProps> = ({ name, cardNumber, validity, cvv, cardScheme, isFreezed }) => {
     const maskCardNumber = (number: string) => {
         const lastFourDigits = number.slice(-4);
         const maskedDigits = number.slice(0, -4).split('').map((digit, index) => (
@@ -26,7 +27,7 @@ const Card: React.FC<CardProps> = ({ name, cardNumber, validity, cvv, cardScheme
         return formattedNumber;
     };
     return (
-        <div className="card">
+        <div className={`card ${isFreezed && 'freezed'}`}>
             <div className="card-header">
                 <img src={icons.logoWhite} alt="aspire" />
             </div>

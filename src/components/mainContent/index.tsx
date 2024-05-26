@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import icons from "../../assets/icons";
 import Accordion from "../accordian";
 import Card from "../card";
@@ -8,36 +8,38 @@ import Header from "../header";
 import RecentTransaction from "../recentTransaction";
 import { Tabs, Tab } from "../tabs";
 import './index.css';
-// Placeholder components
+import { CardContext } from "../../context/cardContext";
+import { actions, transactions } from "./utils";
+import Modal from "../modal";
+import AddCardForm from "../addCardForm";
 
-const cards = [
-    { name: 'Mark Henry', cardNumber: '7377466689992020', validity: '12/20', cvv: '***', cardScheme: 'VISA' },
-    { name: 'Jane Doe', cardNumber: '1234567812345678', validity: '11/23', cvv: '***', cardScheme: 'MasterCard' },
-    { name: 'John Smith', cardNumber: '8765432187654321', validity: '09/21', cvv: '***', cardScheme: 'VISA' },
-];
 
-const actions = [
-    { icon: icons.freezeCard, label: 'Freeze card', type: 'freeze'},
-    { icon: icons.setSpendLimit, label: 'Set spend limit', type: 'spendLimit'},
-    { icon: icons.gPay, label: 'Add to GPay', type: 'gPay'},
-    { icon: icons.replaceCard, label: 'Replace card', type: 'replace'},
-    { icon: icons.deactivateCard, label: 'Cancel card', type: 'cancel'},
-];
-
-const transactions = [
-    { id: 1, merchant: 'Hamleys', date: '20 May 2020', amount: '+ S$ 150', type: 'Refund on debit card', icon: icons.fileStorage, iconBackground: "#009DFF1A" },
-    { id: 2, merchant: 'Hamleys', date: '20 May 2020', amount: '- S$ 150', type: 'Charged to debit card', icon: icons.flights, iconBackground: "#00D6B51A" },
-    { id: 3, merchant: 'Hamleys', date: '20 May 2020', amount: '- S$ 150', type: 'Charged to debit card', icon: icons.megaPhone, iconBackground: "#F251951A" },
-    { id: 4, merchant: 'Hamleys', date: '20 May 2020', amount: '- S$ 150', type: 'Charged to debit card', icon: icons.fileStorage, iconBackground: "#009DFF1A" },
-];
 
 // Main Content Component
 export const MainContent: React.FC = () => {
+    const { cards, setCards } = useContext(CardContext) || {};
     const [carouselActiveIndex, setCarouselActiveIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleFreezeCard = () => {
+        const newCards = JSON.parse(JSON.stringify(cards));
+        newCards[carouselActiveIndex].isFreezed = true;
+        if (setCards) {
+            setCards(newCards);
+        }
+    }
+
+    const handleAddNewCard = () => {
+        setIsModalOpen(true);
+    }
+
+    const submitHook = () =>{
+        setIsModalOpen(false);
+    }
 
     return (
         <div className="main-content">
-            <Header />
+            <Header handleAddNewCard={handleAddNewCard} />
             <Tabs>
                 <Tab label="My debit cards">
                     <div className="debit-card-container">
@@ -47,7 +49,7 @@ export const MainContent: React.FC = () => {
                                 setCarouselActiveIndex(index);
                             }} >
                                 {
-                                    cards.map((card, index) => (
+                                    cards ? cards.map((card, index) => (
                                         <Card
                                             key={index}
                                             name={card.name}
@@ -55,14 +57,17 @@ export const MainContent: React.FC = () => {
                                             validity={card.validity}
                                             cvv={card.cvv}
                                             cardScheme={card.cardScheme}
+                                            isFreezed={card.isFreezed}
                                         />
-                                    ))
+                                    )) : []
                                 }
 
                             </Carousel>
                             <CardActions actions={actions} onActionButtonClick={
                                 (action) => {
-                                    console.log(`Action: ${action.label}`);
+                                    if (action.type === 'freeze') {
+                                        handleFreezeCard();
+                                    }
                                 }
                             } />
                         </div>
@@ -81,6 +86,9 @@ export const MainContent: React.FC = () => {
                     <div>All company cards content</div>
                 </Tab>
             </Tabs>
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <AddCardForm submitHook={submitHook}/>
+            </Modal>
         </div>
 
     )

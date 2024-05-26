@@ -2,7 +2,11 @@ import React from 'react';
 import './index.css';
 import icons from '../../assets/icons';
 
-const Header: React.FC = () => {
+type HeaderProps = {
+    handleAddNewCard: () => void;
+};
+
+const Header: React.FC<HeaderProps> = ({ handleAddNewCard }) => {
     return (
         <div>
             <span className="balance-label">Available balance</span>
@@ -18,7 +22,7 @@ const Header: React.FC = () => {
                         <div className='new-card-button-icon'  >
                             <img src={icons.box} alt="New card" />
                         </div>
-                        <div className='new-card-button-text'>
+                        <div className='new-card-button-text' onClick={handleAddNewCard}>
                             New card
                         </div>
                     </button>

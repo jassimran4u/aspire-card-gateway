@@ -4,6 +4,7 @@ import './index.css';
 interface CardAction {
     icon: string;
     label: string;
+    type: string;
 }
 
 interface CardActionsProps {
