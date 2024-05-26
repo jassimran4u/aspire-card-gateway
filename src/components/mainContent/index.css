@@ -1,0 +1,54 @@
+
+.main-content {
+    flex-grow: 1;
+    padding: 60px;
+  }
+  
+  
+  .card-overview {
+    margin-bottom: 20px;
+  }
+  
+  .recent-transactions {
+  }
+  
+  .debit-card-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .debit-card-container > div{
+    width: 45%;
+    min-width: 414px;
+  }
+
+
+  .left-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .right-div{
+    margin-top: 27px;
+  }
+
+  .show-card-number-container{
+    font-size: 12px;
+    display: flex;
+    color: #01D167;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 12px;
+  }
+
+
+  .show-card-number-container > img{
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+  }

@@ -7,11 +7,11 @@ type MenuItem = {
 };
 
 export const sidebarConfig: MenuItem[] = [
-    { name: 'Home', path: '/', icon: icons.Home  },
-    { name: 'Cards', path: '/cards', icon: icons.Card},
-    { name: 'Payments', path: '/payments' , icon: icons.Payments},
-    { name: 'Credit', path: '/credit' , icon: icons.Credit},
-    { name: 'Settings', path: '/settings',  icon: icons.Account},
+    { name: 'Home', path: '/', icon: icons.home  },
+    { name: 'Cards', path: '/cards', icon: icons.cardLogo},
+    { name: 'Payments', path: '/payments' , icon: icons.payments},
+    { name: 'Credit', path: '/credit' , icon: icons.credit},
+    { name: 'Settings', path: '/settings',  icon: icons.account},
 ];
 
 export const constants = {

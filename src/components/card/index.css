@@ -1,0 +1,78 @@
+.card {
+    background-color: #01D167;
+    color: white;
+    border-radius: 12px;
+    padding: 27.09px;
+    width: 100%;
+    height: 248.85px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.card-header,.card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-scheme {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-body {}
+
+.card-number {
+    margin-top: 32.86px;
+    font-size: 14px;
+    letter-spacing: 3.46px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.card-details {}
+
+.card-holder-name {
+    margin-top: 27.29px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 24px;
+    align-self: flex-start;
+}
+
+.card-validity-row {
+    margin-top: 21.53px;
+    display: flex;
+    justify-content: space-between;
+    width: 218.96px;
+    font-weight: 600;
+}
+
+.card-validity,
+.card-cvv {
+    font-size: 13px;
+}
+
+.card-cvv{
+    display: flex;
+    height: 16px;
+}
+
+.card-cvv-value {
+    font-size: 24px;
+    margin-top: -4px;
+    margin-right: 4.51px;
+}
+
+.dot {
+    width: 9.03px;
+    height: 9.03px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6.7px;
+}
+
+.card-number-segment {
+    margin-right: 20.59px;
+}

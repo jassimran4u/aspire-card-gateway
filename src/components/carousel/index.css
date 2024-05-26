@@ -1,0 +1,39 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .carousel-indicators span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #01D167;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 20%;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #01D167;
+    width: 16px;
+    opacity: 100%;
+  }
+  

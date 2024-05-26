@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./avenir-next/AvenirNext-Regular.woff2') format('woff2'),
+         url('./avenir-next/AvenirNext-Regular.woff') format('woff'),
+         url('./avenir-next/AvenirNext-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('./avenir-next/AvenirNext-Bold.woff2') format('woff2'),
+         url('./avenir-next/AvenirNext-Bold.woff') format('woff'),
+         url('./avenir-next/AvenirNext-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('./avenir-next/AvenirNext-DemiBold.woff2') format('woff2'),
+         url('./avenir-next/AvenirNext-DemiBold.woff') format('woff'),
+         url('./avenir-next/AvenirNext-DemiBold.ttf') format('truetype');
+    font-weight: 600; 
+    font-style: normal;
+  }

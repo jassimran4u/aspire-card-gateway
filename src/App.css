@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('../src/assets/fonts/fonts.css');  
+
 
 body {
   font-family: 'Open Sans', Regular;
@@ -16,23 +18,4 @@ body {
 
 .app {
   display: flex;
-}
-
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.card-overview {
-  margin-bottom: 20px;
-}
-
-.recent-transactions {
 }

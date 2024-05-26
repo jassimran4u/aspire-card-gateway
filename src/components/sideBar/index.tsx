@@ -4,13 +4,13 @@ import { constants, sidebarConfig } from './utils';
 import icons from '../../assets/icons/index';
 import { NavLink } from 'react-router-dom';
 
-const { Logo } = icons;
+const { logo } = icons;
 
 const Sidebar: React.FC = () => {
     return (
         <div className="sidebar">
             <div className="logo">
-                <img src={Logo} alt="aspire" />
+                <img src={logo} alt="aspire" />
             </div>
             <div className="subText" >
                 {constants.HEADER_SUB_TEXT}
