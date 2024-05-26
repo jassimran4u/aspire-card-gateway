@@ -6,9 +6,10 @@ interface AccordionProps {
     title: string;
     isOpen?: boolean;
     children: React.ReactNode;
+    accordionIcon: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ title, isOpen = false, children }) => {
+const Accordion: React.FC<AccordionProps> = ({ title, isOpen = false, children, accordionIcon }) => {
     const [isExpanded, setIsExpanded] = useState(isOpen);
 
     const handleToggle = () => {
@@ -21,7 +22,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, isOpen = false, children }
 
                 <div className="accordion-heading">
                     <div className="accordion-icon" >
-                        <img src={icons.cardDetails} />
+                        <img src={accordionIcon} />
                     </div>
                     <div className="accordion-title">{title}</div>
                 </div>

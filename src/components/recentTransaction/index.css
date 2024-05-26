@@ -1,0 +1,127 @@
+.recent-transactions {
+    padding: 24px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #F0F0F0;
+    border-top: none;
+    z-index: 1;
+    position: relative;
+    background: white;
+  }
+  
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #F5F5F5;
+    font-family: 'Open Sans';
+  }
+  
+  .transaction:first-child {
+    padding-top: 0;
+  }
+
+  .transaction:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .transaction-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #009DFF1A;
+  }
+
+  .transaction-icon img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .transaction-details {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .merchant {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .date {
+    color: #AAAAAA;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  
+  .type {
+    font-size: 12px;
+    color: #325BAF; 
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  
+  .txn-amount {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .txn-amount.positive {
+    color: #01D167;
+  }
+  
+  .txn-amount.negative {
+    color: #222222;
+  }
+  
+  .view-all {
+    display: flex;
+    background-color: #EDFFF5;
+    border: 1px solid #DDFFEC;
+    border-radius: 0 0 8px 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px 16px 16px;
+    margin-top: -4px;
+    font-size: 13px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color:#01D167;
+  }
+  
+  .view-all a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .icon-small-card{
+    height: 20px;
+    width: 24px;
+    border-radius: 10px;
+    border: 1px solid #FCFCFC;
+    background-color: #325BAF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    justify-content: center;
+  }
+  .icon-small-card>div{
+    display: flex;
+  }
+  .icon-small-card>div>img{
+    width: 10px;
+    height: 7.86px;
+  }
+  .next-icon{
+    height: 12px;
+    width: 6.5px;
+    margin-left: 10.5px;
+    margin-top: -1px;
+  }

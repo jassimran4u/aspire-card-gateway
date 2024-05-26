@@ -17,6 +17,11 @@ import downArrow  from "./down-arrow.svg";
 import upArrow  from "./up-arrow.svg";
 import cardDetails  from "./cardDetails.svg";
 import transactions  from "./transactions.svg";
+import fileStorage from "./file-storage.svg";
+import flights from "./flights.svg";
+import megaPhone from "./megaphone.svg";
+import smallCard from "./business-and-finance.svg";
+import nextIcon from "./next.svg";
 
 
 export default {
@@ -38,5 +43,10 @@ export default {
     downArrow,
     upArrow,
     cardDetails,
-    transactions
+    transactions,
+    fileStorage,
+    flights,
+    megaPhone,
+    smallCard,
+    nextIcon
 }

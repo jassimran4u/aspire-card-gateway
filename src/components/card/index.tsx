@@ -7,7 +7,7 @@ interface CardProps {
     cardNumber: string;
     validity: string;
     cvv: string;
-    cardScheme: 'VISA' | 'MasterCard';
+    cardScheme: string;
 }
 
 const Card: React.FC<CardProps> = ({ name, cardNumber, validity, cvv, cardScheme }) => {
