@@ -23,7 +23,7 @@ const CardProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     useEffect(() => {
 
         const fetchCards = async () => {
-            const response = await getFn('getCards', {}, {});
+            const response = await getFn('getCards');
             setCards(response?.json());
         };
 

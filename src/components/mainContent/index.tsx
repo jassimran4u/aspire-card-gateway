@@ -13,9 +13,6 @@ import { actions, transactions } from "./utils";
 import Modal from "../modal";
 import AddCardForm from "../addCardForm";
 
-
-
-// Main Content Component
 export const MainContent: React.FC = () => {
     const { cards, setCards } = useContext(CardContext) || {};
     const [carouselActiveIndex, setCarouselActiveIndex] = useState(0);

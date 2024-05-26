@@ -1,4 +1,4 @@
-export const getFn = (apiUrl:string, queryParams:object, headers:object) => {
+export const getFn = (apiUrl:string) => {
     /* return fetch(`${apiUrl}${queryParams}`, {
         method: 'GET',
         headers: headers

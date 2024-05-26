@@ -14,7 +14,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ name, cardNumber, validity, cvv, cardScheme, isFreezed }) => {
     const maskCardNumber = (number: string) => {
         const lastFourDigits = number.slice(-4);
-        const maskedDigits = number.slice(0, -4).split('').map((digit, index) => (
+        const maskedDigits = number.slice(0, -4).split('').map((index) => (
             <div key={index} className="dot"></div>
         ));
 

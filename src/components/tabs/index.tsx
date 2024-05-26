@@ -6,7 +6,7 @@ interface TabProps {
   children: React.ReactNode;
 }
 
-const Tab: React.FC<TabProps> = ({ label, children }) => {
+const Tab: React.FC<TabProps> = ({children }) => {
   return <div>{children}</div>;
 };
 
